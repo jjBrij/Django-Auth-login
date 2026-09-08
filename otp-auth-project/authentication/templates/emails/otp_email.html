@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Verification Code</title>
+<base target="_blank">
+</head>
+<body style="margin:0; padding:0; background-color:#f4f4f7; font-family: Arial, Helvetica, sans-serif;">
+
+  <!-- Outer wrapper -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f7; padding: 32px 0;">
+    <tr>
+      <td align="center">
+
+        <!-- Main card -->
+        <table width="500" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+
+          <!-- Brand Header (Orange) -->
+          <tr>
+            <td align="center" style="background: linear-gradient(135deg, #ff8c1a 0%, #ff6f00 100%); padding: 28px 32px;">
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <!-- Company Logo -->
+                  <td style="padding-right:12px;">
+                    <img src="{{ logo_url }}" alt="{{ app_name }}" width="56" height="56" style="display:block; border-radius:50%; background:#ffffff; padding:3px;">
+                  </td>
+                  <td align="left">
+                    <span style="color:#ffffff; font-size:18px; font-weight:bold; line-height:1.3; display:block;">
+                      {{ app_name }}
+                    </span>
+                    <span style="color:#ffe3c2; font-size:11px; letter-spacing:1px; text-transform:uppercase;">
+                      Health &amp; Education
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding: 36px 40px 28px 40px;">
+
+              <h2 style="margin:0 0 8px 0; color:#111827; font-size:22px;">Verify your email address</h2>
+
+              <p style="color:#374151; font-size:15px; line-height:1.6; margin:0 0 4px 0;">
+                Hi{% if user_name %} {{ user_name }}{% endif %},
+              </p>
+              <p style="color:#374151; font-size:15px; line-height:1.6; margin:0 0 24px 0;">
+                Use the verification code below to continue. This helps us keep your account secure.
+              </p>
+
+              <!-- OTP Box -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 24px 0;">
+                <tr>
+                  <td align="center" style="background:#fff7ee; border:2px dashed #ff8c1a; border-radius:10px; padding:22px 16px;">
+                    <span style="display:inline-block; font-size:36px; letter-spacing:12px; font-weight:bold; color:#e65c00; font-family:'Courier New', monospace;">
+                      {{ otp }}
+                    </span>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="color:#374151; font-size:14px; line-height:1.6; margin:0;">
+                This code will expire in <strong style="color:#e65c00;">{{ expiry_minutes }} minutes</strong>.
+              </p>
+
+              <p style="color:#6b7280; font-size:13px; line-height:1.6; margin:20px 0 0 0;">
+                For your security, never share this code with anyone, including {{ app_name }} staff.
+                If you did not request this code, you can safely ignore this email.
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding:0 40px;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="border-top:1px solid #eeeeee; font-size:0; line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding: 24px 40px 32px 40px;">
+              <p style="color:#9ca3af; font-size:12px; line-height:1.6; margin:0 0 8px 0;">
+                <strong style="color:#6b7280;">{{ app_name }}</strong><br>
+                निष्ठा धृति: सत्यम् &nbsp;|&nbsp; Approved by Government of NCT of Delhi
+              </p>
+              <p style="color:#c1c7cf; font-size:11px; line-height:1.6; margin:0;">
+                This is an automated message, please do not reply to this email.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Main card -->
+
+        <!-- Bottom note -->
+        <table width="500" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="center" style="padding:16px 20px;">
+              <p style="color:#9ca3af; font-size:11px; margin:0;">
+                &copy; {% now "Y" %} {{ app_name }}. All rights reserved.
+              </p>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
