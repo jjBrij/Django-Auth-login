@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "corsheaders",
     # Local apps
     "authentication",
+    "banner",
 ]
 
 MIDDLEWARE = [
@@ -179,3 +180,8 @@ OTP_LONG_BLOCK_HOURS = config("OTP_LONG_BLOCK_HOURS", default=24, cast=int)
 OTP_MAX_VERIFY_ATTEMPTS = config("OTP_MAX_VERIFY_ATTEMPTS", default=5, cast=int)
 
 APP_NAME = config("APP_NAME", default="SBSHE")
+
+
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"

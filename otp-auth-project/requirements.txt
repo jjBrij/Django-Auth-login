@@ -9,3 +9,4 @@ django-cors-headers==4.3.1
 phonenumbers==8.13.35
 gunicorn==22.0.0
 requests==2.32.3
+Pillow
